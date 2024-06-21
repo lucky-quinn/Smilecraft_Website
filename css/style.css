@@ -301,6 +301,8 @@
     position: relative;
     top: 0;
     transition: .5s;
+    height: 250px;
+    width: 320px;
 }
 
 .team-item:hover img {
