@@ -12,7 +12,6 @@ function processForm(event) {
 
     // Create a sentence
     const sentence = `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nAppointment Date and Time: ${date} ${time}\nProblem: ${problem}`;
-    console.log(sentence);
     // Redirect to another URL
     const redirectUrl = `https://wa.me/919744636355?text=${encodeURIComponent(sentence)}`;
     window.location.href = redirectUrl;
@@ -21,7 +20,8 @@ function processForm(event) {
     return true;
 }
 
-function handleContactForm() {
+function handleContactForm(event) {
+    event.preventDefault();
     // Collect form data
     const form = document.forms['contact'];
     const name = form['name'].value;
@@ -31,7 +31,6 @@ function handleContactForm() {
 
     // Create a summary sentence
     const sentence = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
-    console.log(sentence);
     // Redirect to another URL
     const redirectUrl = `https://wa.me/919744636355?text=${encodeURIComponent(sentence)}`;
     window.location.href = redirectUrl;
