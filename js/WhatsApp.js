@@ -2,7 +2,7 @@
 function processForm(event) {
     event.preventDefault();
     // Collect form data
-    const form = document.forms['appointment', 'appointment-treatment', 'appointment-main'];
+    const form = event.target;
     const name = form['name'].value;
     const email = form['email'].value;
     const mobile = form['mobile'].value;
