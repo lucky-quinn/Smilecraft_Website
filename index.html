@@ -33,6 +33,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Javascript -->
+    <script src="js/WhatsApp.js"></script>
 </head>
 
 <body>
@@ -361,7 +364,7 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="bg-light rounded h-100 d-flex align-items-center p-5">
-                        <form name="appointment-main" netlify>
+                        <form name="appointment-main"  onsubmit="processForm(event)" netlify>
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                     <input type="text" class="form-control border-0" placeholder="Your Name" name ="name" style="height: 55px;">
