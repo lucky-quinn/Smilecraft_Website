@@ -1,0 +1,88 @@
+:root {
+    /* Define your brand colors for easy updating */
+    --brand-primary: #1e88e5; /* A friendly blue */
+    --brand-secondary: #004d40; /* A deep teal/green for contrast */
+    --text-color: #333;
+    --background-color: #f7f7f7; /* Soft off-white */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures it looks good on all screen sizes */
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 450px; /* Optimal reading width for mobile */
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.welcome-heading {
+    color: var(--brand-secondary);
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    font-style: italic;
+    color: #666;
+}
+
+.links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between buttons */
+}
+
+.link-button {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 10px;
+    transition: background-color 0.2s, transform 0.1s;
+    /* Default Button Style */
+    color: white;
+    background-color: var(--brand-secondary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.link-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Specific button styles */
+.primary {
+    background-color: var(--brand-primary);
+    /* Make the primary CTA stand out */
+    font-size: 1.2em; 
+}
+
+.whatsapp {
+    background-color: #25D366; /* WhatsApp Green */
+}
+
+/* Ensuring text remains readable and large enough */
+@media (max-width: 600px) {
+    .link-button {
+        font-size: 1em;
+    }
+}
